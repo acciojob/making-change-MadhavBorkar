@@ -7,14 +7,14 @@ const makeChange = (c) => {
 
     let q = 0, d = 0, n = 0, p = 0;
 
-    q = Math.floor(amount / quarterValue);
-    amount %= quarterValue;
+    q = Math.floor(c / quarterValue);
+    c %= quarterValue;
 
-    d = Math.floor(amount / dimeValue);
-    amount %= dimeValue; 
-    n = Math.floor(amount / nickelValue);
-    amount %= nickelValue;
-    p = amount;
+    d = Math.floor(c / dimeValue);
+    c %= dimeValue; 
+    n = Math.floor(c / nickelValue);
+    c %= nickelValue;
+    p = c;
 	 return { "q": q, "d": d, "n": n, "p": p };
 	
 };
